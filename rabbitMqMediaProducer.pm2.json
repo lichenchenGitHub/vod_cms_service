@@ -1,0 +1,15 @@
+[
+  {
+    "name": "MediaProducer",
+    "script": "./rabbitMqMediaProducer.js",
+    "out_file": "./logs/rabbitMqMediaProducer_access.log",
+    "error_file": "./logs/rabbitMqMediaProducer_error.log",
+    "merge_logs": true,
+    "env_production": {
+      "NODE_ENV": "production"
+    },
+    "env_development": {
+      "NODE_ENV": "development"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "domainTaskCluster",
+    "script": "./domainTaskCluster.js",
+    "out_file": "./logs/domainTaskCluster_access.log",
+    "error_file": "./logs/ddomainTaskCluster_error.log",
+    "merge_logs": true,
+    "env_production": {
+      "NODE_ENV": "production",
+      "PORT": "7017"
+    },
+    "env_development": {
+      "NODE_ENV": "development",
+      "PORT": "3000"
+    }
+  }
+]

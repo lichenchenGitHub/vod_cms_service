@@ -1,0 +1,17 @@
+[
+  {
+    "name": "SPMCodeCluster",
+    "script": "./SPMCodeCluster.js",
+    "out_file": "./logs/SPMCodeCluster_access.log",
+    "error_file": "./logs/SPMCodeCluster_error.log",
+    "merge_logs": true,
+    "env_production": {
+      "NODE_ENV": "production",
+      "PORT": "7011"
+    },
+    "env_development": {
+      "NODE_ENV": "development",
+      "PORT": "3000"
+    }
+  }
+]

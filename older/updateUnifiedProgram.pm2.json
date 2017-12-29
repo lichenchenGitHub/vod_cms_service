@@ -1,0 +1,15 @@
+[
+  {
+    "name": "updateUnifiedProgram",
+    "script": "./updateUnifiedProgram.js",
+    "out_file": "./logs/updateUnifiedProgram_access.log",
+    "error_file": "./logs/updateUnifiedProgram_error.log",
+    "merge_logs": true,
+    "env_production": {
+      "NODE_ENV": "production"
+    },
+    "env_development": {
+      "NODE_ENV": "development"
+    }
+  }
+]

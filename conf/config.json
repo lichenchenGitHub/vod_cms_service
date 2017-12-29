@@ -1,0 +1,152 @@
+{
+  "name": "vod_cms_service",
+  "mongodb": {
+    "host": "10.3.1.7",
+    "port": "57017",
+    "db": "domain_task",
+    "user": "domaintasker",
+    "passwd": "test1234567890",
+    "authdb": "admin",
+    "model_version": "v1"
+  },
+  "mysql": {
+    "dbtype": "mysql",
+    "host": "10.3.1.10",
+    "port": 3306,
+    "db": "vod_cms",
+    "user": "guttvdev",
+    "passwd": "devGuttv123",
+    "prefix": "acl_",
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "idle": 10000
+    }
+  },
+  "redisConf": {
+    "default": "cluster",
+    "cluster": [
+      {
+        "host": "10.3.1.7",
+        "port": 6379,
+        "auth": "",
+        "options": {
+          "socket_keepalive": true
+        }
+      },
+      {
+        "host": "10.3.1.7",
+        "port": 6380,
+        "auth": "",
+        "options": {
+          "socket_keepalive": true
+        }
+      }
+    ],
+    "normal": {
+      "host": "10.3.1.7",
+      "port": 6382,
+      "password": "test1234567890",
+      "options": {
+        "socket_keepalive": true
+      }
+    }
+  },
+  "youkuOpenApi": {
+    "series_prefix": "http://119.254.98.182:31006/youku/openapi/shows/show/showid/",
+    "program_prefix": "http://119.254.98.182:31006/youku/openapi/videos/show/vid/",
+    "series_programs_prefix": "http://119.254.98.182:31006/youku/openapi/shows/videos/showid/"
+  },
+  "strongLoopApi": "http://10.3.1.7:7002/api/",
+  "mediaInfoUrl": "http://10.4.1.8:18888/api/mediainfo/",
+  "domainTaskUrl": "http://47.93.85.185:9191/fdn-api/api/v1/task",
+  "domainCallbackUrl": "http://10.3.1.7:7001/api/getDomainTaskInfo/",
+  "APECN_prefix_cpcode":"APECN_",
+  "APECN_ftp_prefix":"ftp://guttv_ct:Apecn0okMju7@219.142.7.46:21/",
+  "APECN_filepath_prefix":"http://10.3.1.8:9030",
+  "cps_prefix": "http://api.bigme.cibn.cc/v1/",
+  "cps_prefix_test": "http://114.247.94.93:8216/v1",
+  "cps_picture_server_prefix": "http://cdn.cibn.cc/view/",
+  "ott_images_prefix": "http://images.ott.cibntv.net/",
+  "Authorization": "Basic YmlnbWVkaWE6Y2libmF1dGg=",
+  "downloadYoukuMovie": "http://10.3.1.8:8080/youkudown/downtask/add",
+  "downloadCpsMovie": "http://10.3.1.8",
+  "downloadAPECNMovie": "http://10.3.1.8:8080/ytdown/downtask/add",
+  "appId": "596f222a3b12a",
+  "appSecret": "2KXHGgJO1esMaxzM",
+  "cpsTaskFlag": "./cpsFlag.json",
+  "cpsInterval": 3600,
+  "pictureServer": "http://cdn.cibn.cc/view/",
+  "poolOption": {
+    "maxSockets": 100,
+    "socket_keepalive": true
+  },
+  "matchNumber": "^[\\+\\-]?\\d*?\\.?\\d*?$",
+  "filepathPrefix": "/vol",
+  "primaryMoviePrefix": "/youku1",
+  "endProductMoviePrefix": "/youku5",
+  "queuePrefix": {
+    "injectOrder": "injectOrder",
+    "completeMovieInfo": "completeMovieInfoCluster",
+    "unifiedSeries": "unifiedSeries",
+    "unifiedProgramMovie": "unifiedProgramMovie",
+    "unifiedMovie": "unifiedMovie",
+    "importMedia": "importMedia",
+    "importMediaDetail": "importMediaDetail",
+    "importMediaResult": "importMediaResult",
+    "moveUnifiedMovie": "moveUnifiedMovie",
+    "downloadPicture": "downloadPicture",
+    "spmCode": "spmCode",
+    "domainTask": "domainTask",
+    "downloadMovie": "downloadMovie"
+  },
+  "src": 2,
+  "mtype": 0,
+  "keyPrefix": {
+    "injectOrder": "injectOrderList",
+    "movieComplete": "movieCompleteList",
+    "waitUnified": "waitUnifiedList",
+    "unifiedSeries": "unifiedSeriesList",
+    "downloadMovie": "downloadMovie",
+    "downloadPicture": "downloadPictureList",
+    "importMedia": "importMediaList",
+    "importMediaDetail": "importMediaDetailList",
+    "moveUnifiedMovie": "moveUnifiedMovieList",
+    "unifiedMovie": "unifiedMovieList",
+    "importMediaResult": "importMediaResult",
+    "spmCode": "spmCodeList",
+    "domainTask": "domainTaskList",
+    "downloadMovie": "downloadMovie"
+  },
+  "jobOption": {
+    "limit": 20,
+    "delay": 180000,
+    "ttl": 150000,
+    "total": 100,
+    "removeInterval": 150000,
+    "addInterval": 2000,
+    "attempts": 3,
+    "expireDuration": 300,
+    "removeCount": 50
+  },
+  "downloadDir": {
+    "tempPrefix": "./temp/",
+    "destPrefix": "./dest/"
+  },
+  "codePrefix": {
+    "youkuFileId": "youku",
+    "manualFileId": "manual"
+  },
+  "moveUnifiedMovieApi": "http://10.3.1.8:18888/api/ftpln/order",
+  "movieUnifiedMovieCallback": "http://10.3.1.7:7777/api/unifiedMovie/moveFilePath",
+  "importBaseFilepath": "/home/lichenchen/uploadfiles",
+  "rabbitMq": {
+    "user": "sdm",
+    "password": "sdm",
+    "host": "10.4.1.1",
+    "port": "5672",
+    "exchangeName": "distributeMedia",
+    "selectLimit": 10,
+    "interval": 60000
+  }
+}

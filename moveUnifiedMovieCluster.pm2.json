@@ -1,0 +1,17 @@
+[
+  {
+    "name": "moveUnifiedMovieCluster",
+    "script": "./moveUnifiedMovieCluster.js",
+    "out_file": "./logs/moveUnifiedMovieCluster_access.log",
+    "error_file": "./logs/moveUnifiedMovieCluster_error.log",
+    "merge_logs": true,
+    "env_production": {
+      "NODE_ENV": "production",
+      "PORT": "7014"
+    },
+    "env_development": {
+      "NODE_ENV": "development",
+      "PORT": "3000"
+    }
+  }
+]

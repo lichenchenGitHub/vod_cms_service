@@ -1,0 +1,17 @@
+[
+  {
+    "name": "importMediaResultCluster",
+    "script": "./importMediaResultCluster.js",
+    "out_file": "./logs/importMediaResultCluster_access.log",
+    "error_file": "./logs/importMediaResultCluster_error.log",
+    "merge_logs": true,
+    "env_production": {
+      "NODE_ENV": "production",
+      "PORT": "7016"
+    },
+    "env_development": {
+      "NODE_ENV": "development",
+      "PORT": "3000"
+    }
+  }
+]
